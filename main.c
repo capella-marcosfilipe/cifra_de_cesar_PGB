@@ -1,9 +1,22 @@
 #include <stdio.h>
 #include <ctype.h>
-/*
-void encriptar(char *texto[], int chave)
+#include <stdlib.h>
+#include <string.h>
+
+void print_array(char *entrada)
 {
-    for (int i = 0; texto[i] != "\0"; ++i)
+    int i = 0;
+    while( entrada[i] != '\0')
+    {
+        printf("%c",entrada[i]);
+        i++;
+    }
+    printf("\n");
+}
+
+void encriptar(char *texto, int chave)
+{
+    for (int i = 0; texto[i] != '\0'; i++)
     {
         if (islower(texto[i]))
         {
@@ -19,22 +32,19 @@ void encriptar(char *texto[], int chave)
         }
     }
 }
-*/
+
 int main(int argc, char const *argv[])
 {
-    char frase[500];
-    char *frasePtr = frase;
+    char *frase = (char*) malloc(sizeof(char));
     int ch;
 
     printf("Mensagem para encriptar: ");
-    fflush(stdin);
-    scanf("%s", frasePtr);
-    
+    scanf("%s", frase);
+    print_array(frase);
     printf("Digite sua chave: ");
-    fflush(stdin);
     scanf("%d", &ch);
-
-    //encriptar(*frase, ch);
-    printf("%s", frasePtr);
+    encriptar(frase, ch);
+    print_array(frase);
+    system("pause");
     return 0;
 }
