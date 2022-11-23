@@ -9,5 +9,5 @@
 - Sei que strings em lingaugem C são vetores.
 
 ### Passos adotados:
-- Criar uma função encriptar() com um laço *for* para conferir cada caractere e convertê-lo em inteiro (ASCII) para acrescentar a chave e reconverter ao alfabeto.
-- Criar uma função decriptar() que reverta.
+- Criar uma função criptgrafar() com um laço *for* para conferir cada caractere e convertê-lo em inteiro (ASCII) para acrescentar a chave e reconverter ao alfabeto.
+- Criar uma função descriptografar() que reverta.
